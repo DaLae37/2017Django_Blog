@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% for post in posts %}
+<div>
+  <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+  <p>published : {{post.author}}</p>
+  <p>{{post.text}}</p>
+</div>
+{% endfor %}
+<div>
+  <a href="{% url 'post_new' %}">작성</a>
+</div>
+{% endblock %}

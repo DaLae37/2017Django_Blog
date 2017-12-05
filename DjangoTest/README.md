@@ -1,0 +1,1 @@
+> This project is using Django 2.0
